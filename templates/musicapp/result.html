@@ -1,0 +1,13 @@
+
+
+
+{% for language, songs in songs_by_language.items %}
+    <div>
+        <h2>{{ language }}</h2>
+        <ul>
+            {% for song in songs %}
+                <li>{{ song.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}

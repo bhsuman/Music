@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% block title %} Recently Played {% endblock title %}
+
+{% block body %}
+<div class="container">
+    <h2>Add Music</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+
+      <!-- Album -->
+      <div class="form-group">
+        <label for="album">Album:</label>
+        <input type="text" class="form-control" id="album" name="album" required>
+      </div>
+
+      
+
+      <!-- Song Image -->
+      <div class="form-group">
+        <label for="song_img">Song Image:</label>
+        <input type="file" class="form-control-file" id="song_img" name="song_img" required>
+      </div>
+
+      <!-- Year -->
+      <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="number" class="form-control" id="year" name="year" required>
+      </div>
+
+      <!-- Singer -->
+      <div class="form-group">
+        <label for="singer">Singer:</label>
+        <input type="text" class="form-control" id="singer" name="singer" required>
+      </div>
+
+      <!-- Song File -->
+      <div class="form-group">
+        <label for="song_file">Song File:</label>
+        <input type="file" class="form-control-file" id="song_file" name="song_file" required>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Add Music</button>
+    </form>
+  </div>
+{% endblock body %}
