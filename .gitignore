@@ -333,4 +333,4 @@ reddit/media/
 
 !.envs/.local/
 
-.idea
+.ideadb.sqlite3
