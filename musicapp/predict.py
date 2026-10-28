@@ -1,4 +1,4 @@
-def predict_gen(meta1):
+﻿def predict_gen(meta1):
     import pickle
     import os
     from django.conf import settings
